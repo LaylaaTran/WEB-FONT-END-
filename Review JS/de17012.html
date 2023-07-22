@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: rgb(101, 101, 198);
+            width: 300px;
+            align-items: center;
+            
+        }
+
+        table{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr colspan="2">Find the most length words</tr>
+            <tr>
+                <td>Input string : </td>
+                <td><input type="text" id="st"></td>
+            </tr>
+
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" id="result"></td>
+            </tr>
+        </table>
+        <div class="button">
+            <input type="reset" value="Delete">
+            <input type="button" value="Search" onclick="solve()">
+        </div>
+    </form>
+
+    <script>
+        function solve(){
+            var st = document.getElementById('st').value;
+            st= st.split(' ');
+            var index;
+            var word;
+            var max = st[0].length ;
+            for(var i = 0; i < st.length ; i++){
+                if(st[i].length > max){
+                    max = st[i].length;
+                    index = i;
+                  //  word = st[i];
+                    //console.log(max);
+                }
+            }
+
+            document.getElementById('result').value = st[index]+' Độ dài :' + max ;
+        }
+    </script>
+
+</body>
+</html>

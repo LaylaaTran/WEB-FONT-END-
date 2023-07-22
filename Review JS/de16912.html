@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De 16912</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td><b>Input String :</b> </td>
+                <td> <input type="text" id="s"></td>
+            </tr>
+            <tr>
+                <td>Input Words</td>
+                <td><input type="text" id="w">
+                </td>
+            </tr>
+            <tr>
+                <td>Results :</td>
+                <td><input type="text" id="result" ></td>
+            </tr>
+        </table>
+        <div class="btn">
+            <input type="button" value="Done"  onclick="solve()">
+            <input type="reset" name="Cancell">
+        </div>
+    </form>
+
+    <script>
+        function solve(){
+            var s = document.getElementById('s').value;
+            var w = document.getElementById('w').value;
+            var count=0;
+            console.log(count);
+            s = s.split(" ");
+            for(var i  = 0; i < s.length ; i++){
+               if(s[i] == w){
+                count++;
+               }
+            
+            document.getElementById('result').value = count ;
+        }
+    }
+    </script>
+</body>
+</html>

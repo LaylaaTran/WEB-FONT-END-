@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16870</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Input Number : </td>  
+                <td><input type="text" name=""  id="n"></td>
+            </tr>
+            <tr>
+                <td>Count odd : </td>
+                <td><input type="text" name="" id="ans"></td>
+            </tr>
+        </table>
+        <div class="btn">
+            <input type="button" value="Count" onclick="solve()" >
+            <input type="reset" value="Cancelltion">
+        </div>
+    </form>
+
+    <script>
+        function solve(){
+            var n = document.getElementById('n').value;
+            var cnt = 0;
+           var arr = [];
+            while(n > 0){
+                if((n%10)%2 != 0 ){
+                    arr[cnt]= (n%10);
+                    cnt++;
+                }
+                // cnt++;
+               n = Math.floor( n/=10);
+              
+            }
+
+            document.getElementById('ans').value = arr;
+        }
+    </script>
+</body>
+</html>

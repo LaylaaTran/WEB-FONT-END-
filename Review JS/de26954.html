@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De 16954</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr aria-colspan="2"><b>Sắp xếp mảng</b></tr>
+            <tr>
+                <td>Nhập mảng :</td>
+                <td><input type="text" id="arr"></td>
+            
+            </tr>
+            <tr>
+                <td>Arr after sort : </td>
+                <td><input type="text" id="result"></td>
+            </tr>
+        </table>
+        <div class="btn">
+            <input type="button"  value="Sắp xếp" onclick="solve()">
+            <input type="reset" name="" value="Huỷ">
+        </div>
+    </form>
+
+    <script>
+       function solve(){
+        var string = document.getElementById('arr').value;
+        string = string.split(',');
+        console.log(string);
+        for(var i  = 0; i< string.length ; i++){
+            string[i] = parseInt(string[i]);
+        }
+        console.log(string);
+        for(var i = 0 ; i < string.length-1 ; i++){
+            for(var j = i+1 ; j< string.length ; j++){
+                if(string[i] > string[j]){
+                    var temp = string[i];
+                    string[i]= string[j];
+                    string[j] = temp;
+                }
+            }
+        }
+
+        string = string.join(" , ");
+        console.log(string);
+        document.getElementById("result").value = string ;
+
+       }
+    </script>
+</body>
+</html>

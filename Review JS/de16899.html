@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De 16899</title>
+</head>
+<body>
+    <form action="">
+        <table>
+        <tr>
+            <td><b> Fullname :</b>
+               </td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td><b>Last your name :</b></td>
+            <td><input type="text" id="fname"></td>
+        </tr>
+    </table>
+
+    <div class="btn">
+        <input type="button" value="Display"  onclick="solve()">
+        <input type="reset" value="Cancellation">
+    </div>
+    </form>
+
+    <script>
+        function solve(){
+            var name = document.getElementById('name').value;
+            name = name.trim();
+            console.log(name);
+            console.log(typeof(name));
+            name = name.split(' ');
+            console.log(name);
+           
+            document.getElementById('fname').value = name[name.length-1];
+
+            }
+    </script>
+
+</body>
+</html>

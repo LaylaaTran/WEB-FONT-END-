@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deeee</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Nhap chuoi : </td>
+                <td><input type="text" id="st"></td>
+            </tr>
+            <tr>
+                <td>Dem</td>
+                <td><input type="text" id="result"></td>
+            </tr>
+            
+        </table>
+
+        <div class="btn">
+            <input type="button" value="Run" onclick="solve()">
+            <input type="reset" value="Reset">
+
+        </div>
+    </form>
+
+    <script>
+        function solve(){
+            var cnt = 0;
+            var st = document.getElementById('st').value;
+            st = st.split(' ');
+            for(var i = 0 ; i < st.length ;i++){
+                if(st[i].length==4){
+                    cnt++;
+                }
+            }
+
+            document.getElementById('result').value = cnt ;
+        }
+    </script>
+</body>
+</html>
